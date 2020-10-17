@@ -1,0 +1,102 @@
+
+
+header
+    background-image: url('../img/back_header.png')
+    background-repeat: no-repeat
+    width: 100%
+    height: 100%
+    background-size: cover
+
+.grid-container
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-template-rows: 0.8fr 1fr
+    height: 488px
+    width: 100%
+    gap: 10px
+    text-align: center
+    grid-template-areas: ". logo-text logo-text logo-text logo-text logo-text header-text header-text header-text header-text header-text" ". back logo-img logo-img logo-img intorduc intorduc intorduc intorduc intorduc next" 
+
+    // div 
+    //     width: 100%
+    //     height: 100%
+    //     background: blue
+
+.logo-text
+    grid-area: logo-text                              
+
+.header-text                               
+    grid-area: header-text 
+                            
+.logo-img                            
+    grid-area: logo-img
+    position: relative
+    top: 130px
+                              
+.intorduc                                
+    grid-area: intorduc
+    display: flex
+    flex-flow: column
+    align-items: start
+    justify-content: end
+
+    button
+        border: 4px solid rgba(#312d2f,0.6)
+        border-radius: 3px
+        background: #2b7551
+        width: 142px
+        height: 42px 
+        margin-bottom: 20px
+        span
+            color: white
+            font-size: 21px
+            text-align: center
+            font-weight: 350
+    button:focus
+        outline: none
+        
+    h1 
+        font-size: 50px
+        font-family: "Segoe UI Regular"
+        font-weight: 600
+        color: rgb(255, 255, 255)
+        margin: 0
+    p 
+        color: white
+        font-size: 30px
+        text-align: center
+        font-weight: 350
+        margin: -10px 0 20px 0
+
+    
+
+.next                                 
+    grid-area: next
+    align-self: center
+    margin-top: 50px
+                                   
+.back
+    grid-area: back
+    align-self: center
+    margin-top: 50px
+    
+.logo-img img 
+    width: 85%
+    height: 85%
+    object-fit: contain
+    
+    
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+    

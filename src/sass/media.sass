@@ -1,0 +1,37 @@
+@media (max-width: 992px)
+    .grid-container
+        height: 350px
+
+    .logo-img                            
+        top: 90px 
+
+@media (max-width: 768px)
+    .grid-container
+        display: grid
+        grid-template-columns: repeat(6, 1fr)
+        grid-template-rows: 55px 150px 35px
+        height: 250px
+        gap: 2px
+        grid-template-areas:  ". header-text header-text header-text header-text ." "logo-img logo-img intorduc intorduc intorduc intorduc" ". . back next . ." 
+    
+    .back .next 
+        margin-top: 100px
+
+    .logo-text 
+        display: none  
+
+    .logo-img img
+        width: 80%
+        height: 80%
+        object-fit: contain
+
+    .logo-img                            
+        top: 0
+
+// @media (max-width: 576px)
+
+
+@media (max-width: 400px)
+    .grid-container
+        height: 300px
+
