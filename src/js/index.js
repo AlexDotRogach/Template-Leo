@@ -30,24 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function anim(elem) {
-        let i = 1;
-
-        insideAnim();
-
-        function insideAnim() {
-
-            if (i >= 10) {
-                elem.style.opacity = 1;
-                return;
-            } else {
-                elem.style.opacity = `0.${i}`;
-                i += 0.4;
-                requestAnimationFrame(insideAnim);
-            }
-        }
-    }
-
     function backTab(but) {
         
         but.addEventListener('click', () => {
@@ -71,6 +53,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function anim(elem) {
+        let i = 1;
+
+        insideAnim();
+
+        function insideAnim() {
+
+            if (i >= 10) {
+                elem.style.opacity = 1;
+                return;
+            } else {
+                elem.style.opacity = `0.${i}`;
+                i += 0.4;
+                requestAnimationFrame(insideAnim);
+            }
+        }
+    }
+    
     nextTab(next);
     backTab(back);
 });
