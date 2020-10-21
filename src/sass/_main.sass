@@ -1,3 +1,17 @@
+.loading 
+    display: block
+    position: absolute
+    background-image: url('./icons/loading.gif')
+    background-size: cover
+    width: 70px
+    height: 70px
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+
+.loading__wrapper
+    display: none
+    
 .inform_items 
     display: flex
     flex-flow: row nowrap
@@ -57,7 +71,7 @@
 .inform_main
     max-width: 1000px
     height: auto
-    border-bottom: 1px solid black
+    border-bottom: 1px solid rgba(0,0,0,0.3)
     display: none
     transform: translateX(-2000px)
     transition: 1s

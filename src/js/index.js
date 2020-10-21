@@ -1,10 +1,8 @@
+(function () {
 //tabs
-
-document.addEventListener('DOMContentLoaded', () => {
-
     const next = document.querySelector('.next'),
-          back = document.querySelector('.back'),
-          intr = document.querySelectorAll('.intorduc span');
+            back = document.querySelector('.back'),
+            intr = document.querySelectorAll('.intorduc span');
 
     function nextTab(but) {
 
@@ -70,14 +68,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-    
+
     nextTab(next);
     backTab(back);
 
-// main tabs
+    // main tabs
     const items = document.querySelectorAll('.inform_items .inform_items__item'),
-          inform = document.querySelectorAll('.main_section .inform_main'),
-          screenWidth = window.screen.width;
+            inform = document.querySelectorAll('.main_section .inform_main'),
+            screenWidth = window.screen.width;
 
     document.querySelector('.inform_items').addEventListener('click', (e) => {
 
@@ -98,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         items.forEach((item, indIte) => {
 
             item.addEventListener('click', () => {
-       
+        
                 items.forEach(e => {
                     e.classList.remove('inform_items__item_active');
                     e.style.transform = 'translateY(0)'; 
@@ -167,4 +165,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-});
+}());

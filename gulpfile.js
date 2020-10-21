@@ -27,7 +27,7 @@ gulp.task('styles', function() {
         .pipe(autoprefixer())
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(concat('style-min.css'))
-        .pipe(gulp.dest("dist/css"))
+        .pipe(gulp.dest("dist"))
         .pipe(browserSync.stream());
 });
 
@@ -47,7 +47,8 @@ gulp.task('scripts', function () {
     return gulp.src('src/js/**/*.js')
         .pipe(jsmin())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('dist/js'))
+        .pipe(concat('js-min.js'))
+        .pipe(gulp.dest('dist'))
         .pipe(browserSync.stream());
 });
 
