@@ -1,0 +1,66 @@
+@media (max-width: 1400px)
+    .under_main
+        grid-template: 300px / 500px 500px 
+
+@media (max-width: 1050px)
+    .under_main
+        grid-template: 450px / 400px 400px 
+
+@media (max-width: 830px)
+    .under_main
+        grid-template: 450px / 300px 300px 
+
+    .under_main__img img
+        padding-right: 10px
+
+@media (max-width: 620px)
+    .under_main
+        grid-template: 1fr 1fr / 1fr 
+
+        &__choose
+            ul
+                margin: 0 10px 0 15px
+        &__img 
+            display: block
+            margin: 0 auto
+
+    .header_list 
+        text-align: center
+
+    .under_main__choose li img
+        transform: translateX(-15px)
+        margin-left: 5px
+
+
+@media (max-width: 500px)
+    .under_main
+        grid-template: 0.5fr 1fr / 1fr 
+        &__block
+            max-width: 350px 
+        &__block-text
+            font-size: 20px 
+            
+        &__choose
+            ul
+                margin: 0 10px 0 30px
+
+    .block-input__input
+        width: 150px
+
+@media (max-width: 380px)
+    .under_main
+
+        &__block
+            max-width: 300px 
+        &__block-text
+            font-size: 18px 
+        
+
+    .block-input
+        &__input
+            width: 150px
+        &__but
+            width: 70px
+            font-size: 12px
+
+        

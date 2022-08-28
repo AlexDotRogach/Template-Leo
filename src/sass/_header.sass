@@ -1,0 +1,143 @@
+@mixin arrow
+    align-self: center
+    position: relative
+    top: 35%
+    cursor: pointer
+    transition: 0.5s
+
+@mixin arrowHov
+    box-shadow: 1px 1px 1px 4px rgba(255,255,255,0.4)
+    transition: 0.5s
+    border-radius: 50%
+
+header
+    background-image: url('../img/back_header-min.png')
+    background-repeat: no-repeat
+    width: 100%
+    height: 100%
+    background-size: cover
+
+.grid-container
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-template-rows: 0.8fr 1fr
+    height: 488px
+    width: 100%
+    gap: 10px
+    text-align: center
+    grid-template-areas: ". . logo-text logo-text logo-text . header-text header-text header-text header-text header-text" ". back logo-img logo-img logo-img intorduc intorduc intorduc intorduc intorduc next" 
+
+.logo-text
+    grid-area: logo-text  
+    font-size: 82px
+    font-family: "Alegreya"
+    color: rgba(255, 255, 255, 0.678)
+    white-space: nowrap
+    width: 100%
+    height: 100%
+    span
+        display: block
+        width: 100%
+        height: 100%
+        overflow: hidden
+
+.header-text                               
+    grid-area: header-text
+    display: flex
+    align-items: center
+    a 
+        margin-left: 55px
+        color: white !important
+        font-weight: 300
+        font-size: 24px
+        transition: 0.5s  
+    a:first-child
+        margin-left: 0px
+    a:hover
+        cursor: pointer
+        box-shadow: 0 -2px 5px 0 rgba(255, 255, 255, 0.2)
+        border-radius: 10px 
+        padding: 2px      
+        transition: 0.5s 
+                           
+.logo-img                            
+    grid-area: logo-img
+
+.intorduc                                
+    grid-area: intorduc
+    display: flex
+    flex-flow: column
+    align-items: flex-start
+    justify-content: center
+    text-align: left
+    overflow: hidden
+    max-width: 100%
+    max-height: 100%
+
+    span
+        max-width: 100%
+        max-height: 100%
+        display: none
+        transition: 1s
+        opacity: 1
+
+    button
+        border: 4px solid rgba(#312d2f,0.6)
+        border-radius: 3px
+        background: #2b7551
+        width: 142px
+        height: 42px 
+        margin-bottom: 20px
+
+        .buttonText
+            color: white
+            font-size: 21px
+            text-align: center
+            font-weight: 350
+            margin: 0
+
+    button:focus
+        outline: none
+        
+    h1 
+        font-size: 60px
+        font-family: "Roboto"
+        font-weight: 600
+        color: rgb(255, 255, 255)
+        margin: 0
+    p 
+        color: white
+        font-size: 45px
+        text-align: center
+        font-weight: 350
+        margin: -10px 0 20px 0
+
+.span__active
+    display: block !important
+
+
+.next                                 
+    grid-area: next
+    img 
+        +arrow
+                                   
+.back
+    grid-area: back
+    img
+        +arrow
+
+.next img:hover
+    +arrowHov
+
+.back img:hover
+    +arrowHov
+    
+.logo-img img 
+    max-width: 100%
+    max-height: 100%
+    object-fit: contain
+    position: relative
+    top: 80px
+    
+    
+    

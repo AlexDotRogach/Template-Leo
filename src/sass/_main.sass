@@ -1,0 +1,118 @@
+.loading 
+    display: block
+    position: absolute
+    background-image: url('./icons/loading.gif')
+    background-size: cover
+    width: 70px
+    height: 70px
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+
+.loading__wrapper
+    display: none
+    
+.inform_items 
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    margin-top: 90px
+    &__item 
+        max-height: 200px
+        max-width: 145px
+        text-align: center
+        margin-right: 125px
+        cursor: pointer
+        font-family: Alegreya 
+        transition: all 0.8s ease-out
+        &_active
+            border: 1px solid black
+            border-radius: 10px 10px 0 0 
+            position: relative
+            z-index: 999
+            box-shadow: 4px 0 4px 4px rgba(0,0,0,0.4)
+            transform: translateY(53px)
+            transition: all 0.8s ease-out
+
+            .inform_items__describe_item
+                background: white
+                margin-top: 20px      
+
+    &__item:hover
+        box-shadow: 4px 0 4px 4px rgba(0,0,0,0.4)
+
+        .inform_items__describe_item
+            background: white
+           
+    &__item:last-child
+        margin-right: 0 
+
+    &__item_img 
+        max-width: 135px
+        max-height: 155px
+
+    &__describe_item 
+        font-size: 20px
+        margin-top: 10px
+        font-family: "Alegreya"
+        color: rgb(92, 91, 91)
+        max-height: 60px
+        overflow: hidden
+.line
+    width: 70%
+    height: 1px
+    display: block
+    margin: 0 auto
+    position: relative
+    top: 54px
+    bottom: 30px
+    background: black
+    z-index: 1
+
+.inform_main
+    max-width: 1000px
+    height: auto
+    border-bottom: 1px solid rgba(0,0,0,0.3)
+    display: none
+    transform: translateX(-2000px)
+    transition: 1s
+    margin: 0 auto 30px auto
+    padding-top: 40px
+
+    &__img
+        display: block
+        margin: 62px auto 30px auto
+        max-width: 700px
+        max-height: 400px
+        object-fit: contain
+
+    &__describe
+        overflow: hidden
+        max-width: 100%
+        max-height: 100%
+    &__describe:last-child
+        margin-bottom: 75px
+        
+        h2 
+            font-size: 38px
+            font-family: "Roboto"
+            color: rgb(79, 79, 79)
+            text-align: left
+            margin-bottom: 45px
+            font-weight: 200 !important
+
+    &__text
+        display: block
+        font-size: 18px
+        font-family: "Roboto"
+        text-align: justify
+        color: rgb(129, 129, 129)
+        margin-top: 40px
+
+
+
+
+
+
+
+

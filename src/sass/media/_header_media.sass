@@ -1,0 +1,162 @@
+@mixin arrowSmall
+    width: 40px
+    height: 40px
+    margin-top: 20px
+
+@mixin arrowLittle
+    background: #776b6b80
+    opacity: 0.8
+    border-radius: 50%
+
+@media (max-width: 1600px)
+    .logo-img img 
+        position: relative
+        top: 40px
+
+@media (max-width: 1420px)
+    .logo-img img 
+        position: relative
+        top: 80px
+
+@media (max-width: 1050px)
+    .grid-container
+        grid-template-rows: 0.4fr 1fr
+        
+    .header-text a
+        font-size: 22px
+        margin-left: 40px
+
+    .intorduc h1
+        font-size: 45px
+        text-align: center
+
+    .intorduc p
+        font-size: 30px
+    
+    .logo-img img
+        top: 120px
+
+@media (max-width: 800px)
+    .next img
+        margin-left: 40px
+
+@media (max-width: 992px)
+    .grid-container
+        height: 350px 
+
+    .logo-img img 
+        position: relative
+        top: 30px
+
+    .header-text a
+        font-size: 20px
+        margin-left: 25px
+    
+
+@media (max-width: 768px)
+    .grid-container
+        display: grid
+        grid-template-columns: repeat(6, 1fr)
+        grid-template-rows: 55px 150px 35px
+        height: 350px
+        gap: 2px
+        grid-template-areas:  ". header-text header-text header-text header-text ." "logo-img logo-img intorduc intorduc intorduc intorduc" ". . back next . ." 
+    
+    .header-text a
+        font-size: 22px
+        margin: 0 auto
+
+    .header-text a:last-child
+        margin-right: 0
+    
+    .intorduc
+        margin-right: 40px
+        align-items: center
+
+    .intorduc button 
+        position: absolute
+        left: 60%
+        transform: translateX(50%)
+        width: 100px
+        height: 34px
+
+    .intorduc h1
+        margin-top: 15px
+
+    .intorduc button .buttonText
+        font-size: 12px
+    .back img 
+        +arrowSmall
+    
+    .next img 
+        +arrowSmall
+
+    .logo-text 
+        display: none  
+
+    .logo-img img
+        width: 100%
+        height: 100%
+        object-fit: contain
+
+    .logo-img                            
+        top: 0
+    
+    .inform_items__item:hover
+        box-shadow: 2px 0 2px 2px rgba(0,0,0,0.4)
+        transition: 0.4s
+
+    .inform_items 
+        margin-top: 0 !important
+
+@media (max-width: 650px)
+    .intorduc h1
+        font-size: 40px
+
+    .intorduc p
+        font-size: 30px
+
+@media (max-width: 590px)
+    .intorduc h1
+        font-size: 35px
+    .intorduc
+        margin-right: 10px
+
+@media (max-width: 576px)
+    .intorduc h1
+        font-size: 30px
+
+    .intorduc p
+        font-size: 20px
+
+    .intorduc button
+        width: 90px
+
+    .intorduc button .buttonText
+        font-size: 10px
+    
+    .header-text a
+        font-size: 16px
+        margin: 0 auto
+
+@media (max-width: 500px)
+    .intorduc h1
+        font-size: 25px
+
+    .intorduc p
+        font-size: 25px
+    
+    .intorduc button .buttonText
+        font-size: 7px
+
+@media (max-width: 400px)
+
+    .back img 
+        +arrowLittle
+    
+    .next img 
+        +arrowLittle
+
+    .intorduc button 
+        width: 70px
+        height: 24px
